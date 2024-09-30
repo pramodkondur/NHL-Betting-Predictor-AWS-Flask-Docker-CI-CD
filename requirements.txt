@@ -5,4 +5,5 @@ plotly
 matplotlib
 scikit-learn
 dill
+Flask
 #-e .

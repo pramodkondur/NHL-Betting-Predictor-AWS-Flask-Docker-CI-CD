@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Teams</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="login">
+       <h1>Betting on NHL</h1>
+       <form action="{{ url_for('predict_datapoint')}}" method="post">
+        <h2>Predict Game Outcome</h2>
+        <form action="/predict" method="POST">
+            <!-- Home Team Dropdown -->
+            <div class="mb-3">
+                <label class="form-label">Home Team</label>
+                <select class="form-control" id="homeTeam" name="homeTeamCode" required>
+                    <option selected disabled value="">Select Home Team</option>
+                    <option value="TBL">Tampa Bay Lightning</option>
+                    <option value="PIT">Pittsburgh Penguins</option>
+                    <option value="VGK">Vegas Golden Knights</option>
+                    <option value="CAR">Carolina Hurricanes</option>
+                    <option value="TOR">Toronto Maple Leafs</option>
+                    <option value="BOS">Boston Bruins</option>
+                    <option value="LAK">Los Angeles Kings</option>
+                    <option value="VAN">Vancouver Canucks</option>
+                    <option value="CGY">Calgary Flames</option>
+                    <option value="BUF">Buffalo Sabres</option>
+                    <option value="CBJ">Columbus Blue Jackets</option>
+                    <option value="NJD">New Jersey Devils</option>
+                    <option value="DAL">Dallas Stars</option>
+                    <option value="MIN">Minnesota Wild</option>
+                    <option value="NSH">Nashville Predators</option>
+                    <option value="SJS">San Jose Sharks</option>
+                    <option value="WSH">Washington Capitals</option>
+                    <option value="OTT">Ottawa Senators</option>
+                    <option value="WPG">Winnipeg Jets</option>
+                    <option value="DET">Detroit Red Wings</option>
+                    <option value="MTL">Montreal Canadiens</option>
+                    <option value="NYI">New York Islanders</option>
+                    <option value="STL">St. Louis Blues</option>
+                    <option value="EDM">Edmonton Oilers</option>
+                    <option value="ANA">Anaheim Ducks</option>
+                    <option value="NYR">New York Rangers</option>
+                    <option value="PHI">Philadelphia Flyers</option>
+                    <option value="SEA">Seattle Kraken</option>
+                    <option value="FLA">Florida Panthers</option>
+                    <option value="COL">Colorado Avalanche</option>
+                    <option value="ARI">Arizona Coyotes</option>
+                    <option value="CHI">Chicago Blackhawks</option>
+                </select>
+            </div>
+    
+            <!-- Away Team Dropdown -->
+            <div class="mb-3">
+                <label class="form-label">Away Team</label>
+                <select class="form-control" id="awayTeam" name="awayTeamCode" required>
+                    <option selected disabled value="">Select Away Team</option>
+                    <option value="TBL">Tampa Bay Lightning</option>
+                    <option value="PIT">Pittsburgh Penguins</option>
+                    <option value="VGK">Vegas Golden Knights</option>
+                    <option value="CAR">Carolina Hurricanes</option>
+                    <option value="TOR">Toronto Maple Leafs</option>
+                    <option value="BOS">Boston Bruins</option>
+                    <option value="LAK">Los Angeles Kings</option>
+                    <option value="VAN">Vancouver Canucks</option>
+                    <option value="CGY">Calgary Flames</option>
+                    <option value="BUF">Buffalo Sabres</option>
+                    <option value="CBJ">Columbus Blue Jackets</option>
+                    <option value="NJD">New Jersey Devils</option>
+                    <option value="DAL">Dallas Stars</option>
+                    <option value="MIN">Minnesota Wild</option>
+                    <option value="NSH">Nashville Predators</option>
+                    <option value="SJS">San Jose Sharks</option>
+                    <option value="WSH">Washington Capitals</option>
+                    <option value="OTT">Ottawa Senators</option>
+                    <option value="WPG">Winnipeg Jets</option>
+                    <option value="DET">Detroit Red Wings</option>
+                    <option value="MTL">Montreal Canadiens</option>
+                    <option value="NYI">New York Islanders</option>
+                    <option value="STL">St. Louis Blues</option>
+                    <option value="EDM">Edmonton Oilers</option>
+                    <option value="ANA">Anaheim Ducks</option>
+                    <option value="NYR">New York Rangers</option>
+                    <option value="PHI">Philadelphia Flyers</option>
+                    <option value="SEA">Seattle Kraken</option>
+                    <option value="FLA">Florida Panthers</option>
+                    <option value="COL">Colorado Avalanche</option>
+                    <option value="ARI">Arizona Coyotes</option>
+                    <option value="CHI">Chicago Blackhawks</option>
+                </select>
+            </div>
+        
+            <!-- Season Dropdown (Years 2007 to 2024) -->
+            <div class="mb-3">
+                <label class="form-label">Season</label>
+                <select class="form-control" name="season" required>
+                    <option selected disabled value="">Select Season</option>
+                    <option value="2007">2007</option>
+                    <option value="2008">2008</option>
+                    <option value="2009">2009</option>
+                    <option value="2010">2010</option>
+                    <option value="2011">2011</option>
+                    <option value="2012">2012</option>
+                    <option value="2013">2013</option>
+                    <option value="2014">2014</option>
+                    <option value="2015">2015</option>
+                    <option value="2016">2016</option>
+                    <option value="2017">2017</option>
+                    <option value="2018">2018</option>
+                    <option value="2019">2019</option>
+                    <option value="2020">2020</option>
+                    <option value="2021">2021</option>
+                    <option value="2022">2022</option>
+                    <option value="2023">2023</option>
+                    <option value="2024">2024</option>
+                </select>
+            </div>
+    
+            <!-- Is Playoff Game Toggle -->
+            <div class="mb-3">
+                <label class="form-label">Is Playoff Game?</label>
+                <select class="form-control" name="isPlayoffGame" required>
+                    <option selected disabled value="">Playoff Game?</option>
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </select>
+            </div>
+    
+            <!-- Numerical Inputs -->
+            <div class="mb-3">
+                <label class="form-label">Total Games Played by Home Team</label>
+                <input class="form-control" type="number" name="total_games_played_by_home" placeholder="Total games played by home" required />
+            </div>
+    
+            <div class="mb-3">
+                <label class="form-label">Total Games Played by Away Team</label>
+                <input class="form-control" type="number" name="total_games_played_by_away" placeholder="Total games played by away" required />
+            </div>
+    
+            <div class="mb-3">
+                <label class="form-label">Total Wins by Home Team</label>
+                <input class="form-control" type="number" name="total_wins_home" placeholder="Total wins by home team" required />
+            </div>
+    
+            <div class="mb-3">
+                <label class="form-label">Total Losses by Home Team</label>
+                <input class="form-control" type="number" name="total_losses_home" placeholder="Total losses by home team" required />
+            </div>
+    
+            <div class="mb-3">
+                <label class="form-label">Total Wins by Away Team</label>
+                <input class="form-control" type="number" name="total_wins_away" placeholder="Total wins by away team" required />
+            </div>
+    
+            <div class="mb-3">
+                <label class="form-label">Total Losses by Away Team</label>
+                <input class="form-control" type="number" name="total_losses_away" placeholder="Total losses by away team" required />
+            </div>
+    
+            <div class="mb-3">
+                <label class="form-label">Last 10 Games Wins by Home Team</label>
+                <input class="form-control" type="number" name="last_10_games_win_home" placeholder="Wins in last 10 games (Home)" required />
+            </div>
+    
+            <div class="mb-3">
+                <label class="form-label">Last 10 Games Wins by Away Team</label>
+                <input class="form-control" type="number" name="last_10_games_win_away" placeholder="Wins in last 10 games (Away)" required />
+            </div>
+    
+             <!-- Last Meeting Result -->
+            <div class="mb-3">
+                <label class="form-label">Last Meeting Result</label>
+                <select class="form-control" name="last_meeting_result" required>
+                    <option selected disabled value="">Select Last Meeting Result</option>
+                    <option value="1">Yes (Home Win)</option>
+                    <option value="0">No (Away Win)</option>
+                    <option value="2">Haven't Played Yet</option>
+                </select>
+            </div>
+
+            <!-- Last Game Result for Home Team -->
+            <div class="mb-3">
+                <label class="form-label">Last Game Result for Home Team</label>
+                <select class="form-control" name="last_game_result_home" required>
+                    <option selected disabled value="">Select Home Team Last Game Result</option>
+                    <option value="1">Yes (Win)</option>
+                    <option value="0">No (Loss)</option>
+                    <option value="2">Haven't Played Yet</option>
+                </select>
+            </div>
+
+            <!-- Last Game Result for Away Team -->
+            <div class="mb-3">
+                <label class="form-label">Last Game Result for Away Team</label>
+                <select class="form-control" name="last_game_result_away" required>
+                    <option selected disabled value="">Select Away Team Last Game Result</option>
+                    <option value="1">Yes (Win)</option>
+                    <option value="0">No (Loss)</option>
+                    <option value="2">Haven't Played Yet</option>
+                </select>
+            </div>
+    
+        <div class="mb-3">
+            <input class="btn btn-primary" type="submit" value="Predict Game Outcome" required />
+        </div>
+    </form>
+    <h2>
+       THE  prediction is {{results}}
+    </h2>
+
+    <!-- Add JavaScript at the end of the body -->
+    <script>
+        const awayTeamDropdown = document.getElementById('awayTeam');
+        const homeTeamDropdown = document.getElementById('homeTeam');
+
+        function updateDropdowns() {
+            const selectedAwayTeam = awayTeamDropdown.value;
+            const selectedHomeTeam = homeTeamDropdown.value;
+
+            // Enable all options in both dropdowns
+            [...homeTeamDropdown.options].forEach(option => option.disabled = false);
+            [...awayTeamDropdown.options].forEach(option => option.disabled = false);
+
+            // Disable the selected home team in the away dropdown and vice versa
+            if (selectedHomeTeam) {
+                awayTeamDropdown.querySelector(`option[value="${selectedHomeTeam}"]`).disabled = true;
+            }
+            if (selectedAwayTeam) {
+                homeTeamDropdown.querySelector(`option[value="${selectedAwayTeam}"]`).disabled = true;
+            }
+        }
+
+        // Attach event listeners to both dropdowns
+        awayTeamDropdown.addEventListener('change', updateDropdowns);
+        homeTeamDropdown.addEventListener('change', updateDropdowns);
+    </script>
+
+</body>
+</html>
