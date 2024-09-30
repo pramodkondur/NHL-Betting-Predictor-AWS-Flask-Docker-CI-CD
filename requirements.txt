@@ -4,4 +4,5 @@ numpy
 plotly
 matplotlib
 scikit-learn
+dill
 #-e .

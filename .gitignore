@@ -9,11 +9,6 @@ __pycache__/
 # Data file
 notebook/data/shots_2007-2023.csv
 
-# Artificats
-
-artifacts/
-
-
 # Distribution / packaging
 .Python
 build/
