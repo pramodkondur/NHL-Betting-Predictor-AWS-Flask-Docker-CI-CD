@@ -632,6 +632,9 @@ Bets on Favorites = 0.6 * 462 ≈ 277 wins
 - **Number of Bets on Underdogs**:
 Bets on Underdogs = 0.4 * 462 ≈ 185 wins
 
+- **Losses (Incorrect Predictions)**:
+
+Losses = 0.29 × 462 = 133.98 ≈ 134 games
 
 
 ### Total Payout Calculation
@@ -652,16 +655,22 @@ Profit per Bet = 100 * (150 / 100) = 150
    - **Total Profit**:
 Total Profit from Underdogs = 185 * 150 = 27,750
 
+3. **For Losses**:
+Total Loss from Incorrect Predictions = 134 * 100 = 13,400
+
+
 ### Total Estimated Profit for the Season
 
-Total Estimated Profit = 21,358.84 + 27,750 ≈ 49,108.84
+Total Estimated Profit = 21,358.84 + 27,750 - 13,400 ≈ 35,708.84
+
+The adjusted total estimated profit for an entire season of NHL hockey games amounts to **$35,708.84**. This figure indicates a promising return on investment, showcasing the potential profitability of employing a strategic betting approach based on model predictions.
 
 ## 10. Conclusion
-This project successfully demonstrated the use of data science and machine learning to enhance NHL game outcome predictions. The combination of data from MoneyPuck, machine learning algorithms, and modern deployment technologies resulted in a model that significantly improved prediction accuracy.
+This project effectively showcased the integration of data science and machine learning to enhance predictions of NHL game outcomes. By leveraging data from MoneyPuck, applying advanced machine learning algorithms, and utilizing modern deployment technologies, we developed a model that substantially increased prediction accuracy.
 
-By using a modular approach, containerized architecture with Docker, and seamless CI/CD pipelines, the project was efficiently deployed and maintained on AWS EC2 and Elastic Beanstalk. This approach provides bettors with a powerful tool for making more informed decisions, potentially increasing profitability and enjoyment of NHL betting.
+Employing a modular coding approach, a containerized architecture with Docker, and streamlined CI/CD pipelines, the project was successfully deployed and maintained on AWS EC2 and Elastic Beanstalk. This robust setup empowers bettors with a valuable tool for making well-informed decisions, ultimately enhancing their profitability and enjoyment of NHL betting.
 
-Future steps could involve further improving the model's accuracy, improving the U.I., expanding the app to cover more aspects of the game, or incorporating live in-game data to provide real-time betting insights. With the foundation laid by this project, the potential for future enhancements is significant.
+Looking ahead, there are numerous opportunities for improvement, including refining the model’s accuracy, enhancing the user interface, expanding the application to encompass more game-related features, and integrating live in-game data for real-time betting insights. With a solid foundation established by this project, the potential for future enhancements is promising.
 
 Credits: [NHL](https://www.nhl.com/) and [Money Puck](https://moneypuck.com/data.htm)
 
