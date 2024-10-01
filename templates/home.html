@@ -48,9 +48,9 @@
 </head>
 <body>
     <div class="login">
-       <h1>Betting on NHL</h1>
+       <h1>Bet on NHL</h1>
        <form action="{{ url_for('predict_datapoint')}}" method="post">
-        <h2>Predict Game Outcome</h2>
+        <h2>Bet Better! </h2>
         <!-- Center-aligned image -->
         <div style="text-align: center;">
             <img src="{{ url_for('static', filename='nhl-logos/NHL-league-logo.png') }}" alt="NHL Logo" style="width:200px;height:auto;">
@@ -258,7 +258,7 @@
             <h2>
                 {% if results == 1 %}
                     Prediction: Home Team Wins
-                {% else %}
+                {% elif results == 0 %}
                     Prediction: Away Team Wins
                 {% endif %}
             </h2>
