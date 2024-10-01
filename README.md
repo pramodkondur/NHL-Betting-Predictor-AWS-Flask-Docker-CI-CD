@@ -528,7 +528,7 @@ Each of these modules can be integrated into a cohesive pipeline that automates 
 
 By employing a modular approach, we can ensure that the project achieves a clean, efficient, and scalable codebase that can adapt to changing requirements and facilitate ongoing development.
 
-## 6. Deployment and Application
+## 7. Deployment and Application
 
 The application underwent a comprehensive deployment process to ensure that it was accessible, scalable, and maintainable:
 
@@ -614,7 +614,7 @@ Total Profit from Underdogs = 185 * 150 = 27,750
 
 Total Estimated Profit = 21,358.84 + 27,750 ≈ 49,108.84
 
-## 7. Conclusion
+## 8. Conclusion
 This project successfully demonstrated the use of machine learning to enhance NHL game outcome predictions. The combination of data from MoneyPuck, machine learning algorithms, and modern deployment technologies resulted in a model that significantly improved prediction accuracy.
 
 By using a modular approach, containerized architecture with Docker, and seamless CI/CD pipelines, the project was efficiently deployed and maintained on AWS EC2 and Elastic Beanstalk. This approach provides bettors with a powerful tool for making more informed decisions, potentially increasing profitability and enjoyment of NHL betting.
