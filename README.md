@@ -522,9 +522,13 @@ The structure of a modular machine learning project typically includes the follo
 
 7. **Deployment Module**: This final module focuses on deploying the application, ensuring that it runs smoothly in production environments, such as AWS EC2 and Elastic Beanstalk.
 
+### Loggers and Exception Handling
+
+To enhance the robustness of the application, logging and exception handling were implemented in the modular code.
+
 ### Pipelines
 
-Each of these modules can be integrated into a cohesive pipeline that automates the workflow from data ingestion to deployment. The pipelines ensure that data flows seamlessly through the various stages, allowing for efficient and reproducible machine learning processes. This structure not only enhances clarity but also provides a framework for continuous improvement and updates as new data or methods become available.
+Each of these modules can now be integrated into a cohesive pipeline that automates the workflow from data ingestion to deployment. The pipelines ensure that data flows seamlessly through the various stages, allowing for efficient and reproducible machine learning processes. This structure not only enhances clarity but also provides a framework for continuous improvement and updates as new data or methods become available.
 
 By employing a modular approach, we can ensure that the project achieves a clean, efficient, and scalable codebase that can adapt to changing requirements and facilitate ongoing development.
 
@@ -562,9 +566,7 @@ This project created a predictive model for NHL games, analyzing the potential f
 
 - **Total Games in a Season**: Approximately **656 games**.
 - **Predicted Wins**: With a **71%** accuracy:
-  \[
-  \text{Predicted Wins} = 0.71 \times 656 \approx 462 \text{ wins}
-  \]
+  Predicted Wins = 0.71 * 656 ≈ 462 wins
 
 ## Hypothetical Betting Example
 
@@ -600,7 +602,6 @@ Bets on Underdogs = 0.4 * 462 ≈ 185 wins
 
    - **Total Profit**:
   Total Profit from Favorites = 277 * 76.92 ≈ 21,358.84
-
 
 
 2. **For Underdogs (Odds +150)**:
