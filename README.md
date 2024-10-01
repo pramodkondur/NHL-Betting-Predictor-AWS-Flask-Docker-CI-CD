@@ -633,7 +633,6 @@ Bets on Favorites = 0.6 * 462 ≈ 277 wins
 Bets on Underdogs = 0.4 * 462 ≈ 185 wins
 
 - **Losses (Incorrect Predictions)**:
-
 Losses = 0.29 × 462 = 133.98 ≈ 134 games
 
 
@@ -656,7 +655,7 @@ Profit per Bet = 100 * (150 / 100) = 150
 Total Profit from Underdogs = 185 * 150 = 27,750
 
 3. **For Losses**:
-    - Total Loss from Incorrect Predictions = 134 * 100 = 13,400
+    - **Total Loss**: Total Loss from Incorrect Predictions = 134 * 100 = 13,400
 
 
 ### Total Estimated Profit for the Season
