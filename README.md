@@ -599,7 +599,7 @@ Images for the app deployed on AWS EC2
 ![img](static/images/img3.png)
 ![img](static/images/img4.png)
 
-# 9. Hypothetical Gain from the model
+## 9. Hypothetical Gain from the model
 
 This project created a predictive model for NHL games, analyzing the potential financial gains from betting based on predicted outcomes. The model achieves an accuracy of **71%**, enabling users to make informed betting decisions throughout an NHL season. Now let's see how it would work in real use case.
 
@@ -656,7 +656,7 @@ Profit per Bet = 100 * (150 / 100) = 150
 Total Profit from Underdogs = 185 * 150 = 27,750
 
 3. **For Losses**:
-Total Loss from Incorrect Predictions = 134 * 100 = 13,400
+    - Total Loss from Incorrect Predictions = 134 * 100 = 13,400
 
 
 ### Total Estimated Profit for the Season
