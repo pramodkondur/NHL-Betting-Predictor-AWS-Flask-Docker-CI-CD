@@ -473,15 +473,55 @@ df['last_game_result_away'] = df.apply(lambda row: get_last_game_result(row['awa
 
 All of these will be useful fo our prediction
 
+## 4. EDA (Exploratory Data Analysis)
 
-## 4. Model Training, Testing and Evaluation
+In this we will try to look at an overall view of how the teams data looks
 
-In this step, the dataset was split into train and test and evaluated first on a base Random Forest Model without all the new features and then further 3 models with the new features and the results are as so:
+![img](static/images/graph1.png)
+![img](static/images/graph2.png)
+![img](static/images/graph3.png)
+![img](static/images/graph4.png)
+
+
+Here are several conclusions that we can draw from our exploratory data analysis (EDA):
+
+- Home vs. Away Performance:
+
+There are notable variations in win probabilities between home and away games, suggesting that the venue of a match significantly impacts team performance. Teams tend to perform better at home, emphasizing the importance of incorporating features that distinguish between home and away games in predictive models.
+Team Performance Disparities:
+
+The total wins recorded across different teams reveal significant disparities in performance levels. Some teams consistently outperform others, indicating that certain franchises may have stronger rosters, better coaching strategies, or more effective training programs. This information could guide decisions related to team development and resource allocation.
+
+- Win Progression Over Time:
+
+The analysis of win progression over time shows distinct trends for each team throughout the seasons. Certain teams display sustained success, while others struggle to maintain consistency. This trend analysis can help identify patterns in performance, enabling teams to understand periods of strength and weakness and informing future strategic decisions.
+
+- Insights into Team Dynamics:
+
+By examining win statistics in relation to various factors (e.g., opponent strength, player injuries, or changes in coaching staff), we can derive deeper insights into the dynamics of each team. This understanding could inform decisions on player acquisitions, trades, or changes in coaching staff to enhance overall team performance.
+
+- Fan Engagement and Marketing Strategies:
+
+Understanding how different teams perform in various contexts can help franchises tailor their marketing strategies and fan engagement initiatives. For instance, highlighting a team’s strong home performance could drive ticket sales, while strategies could be developed to boost support during away games.
+
+- Seasonal Trends:
+
+Insights gained from analyzing performance trends across seasons can guide teams in assessing their long-term strategies. Recognizing when a team tends to perform best or struggles may assist in optimizing training schedules, scouting efforts, and overall resource management.
+
+- Predictive Modeling Opportunities: (OUR MAIN FOCUS HERE)
+
+The variations in team performance and the impact of game location present opportunities for developing predictive models that can forecast outcomes based on historical performance data. Incorporating factors such as home/away status, total wins, and win progression could improve the accuracy of predictions and aid in strategic planning.
+
+Overall, these conclusions can help inform strategic decisions for team management, fan engagement, and predictive modeling while emphasizing the importance of continuous performance analysis in sports analytics.
+
+## 5. Model Training, Testing and Evaluation
+
+In this step, we will look to train,test, and evaluate our model. The dataset is split into train and test and evaluated first on a base Random Forest Model without all the new features and then further 3 models with the new features and the results are as so:
 - A baseline model achieved an F1 score of **55%**, giving a basic measure of predictive performance.
 - An enhanced model which was a fine tuned Random Forest model achieved an F1 score of **71%**, demonstrating significant improvement.
 
 
-## 5. Flask Application
+## 6. Flask Application
 
 The project utilizes Flask to create a web application that enables users to interact with the predictive model seamlessly. Flask, being a lightweight WSGI web application framework in Python, is ideal for this project due to its simplicity and flexibility.
 
@@ -493,7 +533,7 @@ The project utilizes Flask to create a web application that enables users to int
 
 The Flask application serves as the interface for users to interact with the predictive model, making it an essential part of the overall architecture of the project.
 
-## 6. Including Modular Approach
+## 7. Including Modular Approach
 
 ### Importance of Modular Coding in Machine Learning
 
@@ -532,7 +572,7 @@ Each of these modules can now be integrated into a cohesive pipeline that automa
 
 By employing a modular approach, we can ensure that the project achieves a clean, efficient, and scalable codebase that can adapt to changing requirements and facilitate ongoing development.
 
-## 7. Deployment and Application
+## 8. Deployment and Application
 
 The application underwent a comprehensive deployment process to ensure that it was accessible, scalable, and maintainable:
 
@@ -558,7 +598,7 @@ Images for the app deployed on AWS EC2
 ![img](static/images/img3.png)
 ![img](static/images/img4.png)
 
-# Hypothetical Gain from the model
+# 9. Hypothetical Gain from the model
 
 This project created a predictive model for NHL games, analyzing the potential financial gains from betting based on predicted outcomes. The model achieves an accuracy of **71%**, enabling users to make informed betting decisions throughout an NHL season. Now let's see how it would work in real use case.
 
@@ -615,7 +655,7 @@ Total Profit from Underdogs = 185 * 150 = 27,750
 
 Total Estimated Profit = 21,358.84 + 27,750 ≈ 49,108.84
 
-## 8. Conclusion
+## 10. Conclusion
 This project successfully demonstrated the use of data science and machine learning to enhance NHL game outcome predictions. The combination of data from MoneyPuck, machine learning algorithms, and modern deployment technologies resulted in a model that significantly improved prediction accuracy.
 
 By using a modular approach, containerized architecture with Docker, and seamless CI/CD pipelines, the project was efficiently deployed and maintained on AWS EC2 and Elastic Beanstalk. This approach provides bettors with a powerful tool for making more informed decisions, potentially increasing profitability and enjoyment of NHL betting.
