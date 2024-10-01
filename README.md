@@ -74,10 +74,6 @@ The motivation behind this project stems from the intersection of data science a
 The volatility of the NHL, influenced by a variety of in-game and external factors, makes traditional predictions challenging. Machine learning can help bettors navigate this complexity by analyzing historical data and identifying patterns that humans might overlook. By leveraging advanced analytics, bettors can improve their chances of making more informed and profitable wagers.
 
 ---
-### Background: What Is Sentiment Analysis and What Can It Be Used For ?
-The advent of e-commerce has generated an enormous volume of user-generated content in the form of reviews. Sentiment analysis, a branch of natural language processing (NLP), enables businesses to gauge customer sentiment from these reviews.
-
----
 # The Process 
   ### 1. Data Acquisition
 ### Money Puck - Dataset [Link](https://moneypuck.com/data.htm)
@@ -530,8 +526,7 @@ The structure of a modular machine learning project typically includes the follo
 
 Each of these modules can be integrated into a cohesive pipeline that automates the workflow from data ingestion to deployment. The pipelines ensure that data flows seamlessly through the various stages, allowing for efficient and reproducible machine learning processes. This structure not only enhances clarity but also provides a framework for continuous improvement and updates as new data or methods become available.
 
-By employing a modular approach, the NHL Betting Prediction project achieves a clean, efficient, and scalable codebase that can adapt to changing requirements and facilitate ongoing development.
----
+By employing a modular approach, we can ensure that the project achieves a clean, efficient, and scalable codebase that can adapt to changing requirements and facilitate ongoing development.
 
 ## 6. Deployment and Application
 
