@@ -474,7 +474,7 @@ df['last_game_result_away'] = df.apply(lambda row: get_last_game_result(row['awa
 All of these will be useful fo our prediction
 
 
-## 4. Modelling
+## 4. Model Training, Testing and Evaluation
 
 In this step, the dataset was split into train and test and evaluated first on a base Random Forest Model without all the new features and then further 3 models with the new features and the results are as so:
 - A baseline model achieved an F1 score of **55%**, giving a basic measure of predictive performance.
@@ -554,6 +554,65 @@ Images for the app deployed on AWS EC2
 ![img](static/images/img3.png)
 ![img](static/images/img4.png)
 
+# Hypothetical Gain from the model
+
+This project created a predictive model for NHL games, analyzing the potential financial gains from betting based on predicted outcomes. The model achieves an accuracy of **71%**, enabling users to make informed betting decisions throughout an NHL season. Now let's see how it would work in real use case.
+
+## Model Assumptions
+
+- **Total Games in a Season**: Approximately **656 games**.
+- **Predicted Wins**: With a **71%** accuracy:
+  \[
+  \text{Predicted Wins} = 0.71 \times 656 \approx 462 \text{ wins}
+  \]
+
+## Hypothetical Betting Example
+
+Let’s assume our model predicts the winning team for each game based on its analysis. We will consider a mix of different teams across hypothetical matchups throughout the season.
+
+### Betting Strategy
+
+- **Bet $100** on the predicted winning team in each matchup.
+
+### Expected Winnings Calculation
+
+1. **Winning Teams and Odds**: For simplicity, we assume the following moneyline odds for various hypothetical teams:
+   - **Favorites (approx. 60% of predicted wins)**: Average odds of -130
+   - **Underdogs (approx. 40% of predicted wins)**: Average odds of +150
+
+#### Breakdown of Bets
+
+- **Number of Bets on Favorites**:
+Bets on Favorites = 0.6 * 462 ≈ 277 wins
+
+
+- **Number of Bets on Underdogs**:
+Bets on Underdogs = 0.4 * 462 ≈ 185 wins
+
+
+
+### Total Payout Calculation
+
+1. **For Favorites (Odds -130)**:
+   - **Profit Calculation**:
+  Profit per Bet = 100 * (100 / 130) ≈ 76.92
+
+
+   - **Total Profit**:
+  Total Profit from Favorites = 277 * 76.92 ≈ 21,358.84
+
+
+
+2. **For Underdogs (Odds +150)**:
+   - **Profit Calculation**:
+Profit per Bet = 100 * (150 / 100) = 150
+
+   - **Total Profit**:
+Total Profit from Underdogs = 185 * 150 = 27,750
+
+### Total Estimated Profit for the Season
+
+Total Estimated Profit = 21,358.84 + 27,750 ≈ 49,108.84
 
 ## 7. Conclusion
 This project successfully demonstrated the use of machine learning to enhance NHL game outcome predictions. The combination of data from MoneyPuck, machine learning algorithms, and modern deployment technologies resulted in a model that significantly improved prediction accuracy.
@@ -563,3 +622,7 @@ By using a modular approach, containerized architecture with Docker, and seamles
 Future steps could involve further improving the model's accuracy, improving the U.I., expanding the app to cover more aspects of the game, or incorporating live in-game data to provide real-time betting insights. With the foundation laid by this project, the potential for future enhancements is significant.
 
 Credits: [NHL](https://www.nhl.com/) and [Money Puck](https://moneypuck.com/data.htm)
+
+## Disclaimer
+
+**Responsible Betting**: Please remember that sports betting should be done responsibly. Always gamble within your means and be aware of the risks involved. Betting outcomes can be unpredictable, and it's crucial to manage your bankroll wisely. If you feel that your gambling habits are becoming problematic, consider seeking assistance from a professional or a support group.
