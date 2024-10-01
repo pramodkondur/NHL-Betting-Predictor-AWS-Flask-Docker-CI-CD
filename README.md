@@ -478,6 +478,7 @@ All of these will be useful fo our prediction
 In this we will try to look at an overall view of how the teams data looks
 
 ![img](static/images/graph1.png)
+Noticebaly there is less score for SEA(Seattle Kraken) as they were only formed in 2021
 ![img](static/images/graph2.png)
 ![img](static/images/graph3.png)
 ![img](static/images/graph4.png)
