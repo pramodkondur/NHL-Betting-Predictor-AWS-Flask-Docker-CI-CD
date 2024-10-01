@@ -524,7 +524,7 @@ The structure of a modular machine learning project typically includes the follo
 
 ### Loggers and Exception Handling
 
-To enhance the robustness of the application, logging and exception handling were implemented in the modular code.
+To enhance the robustness of the application, logging and exception handling were implemented in the modular code as well.
 
 ### Pipelines
 
@@ -616,7 +616,7 @@ Total Profit from Underdogs = 185 * 150 = 27,750
 Total Estimated Profit = 21,358.84 + 27,750 ≈ 49,108.84
 
 ## 8. Conclusion
-This project successfully demonstrated the use of machine learning to enhance NHL game outcome predictions. The combination of data from MoneyPuck, machine learning algorithms, and modern deployment technologies resulted in a model that significantly improved prediction accuracy.
+This project successfully demonstrated the use of data science and machine learning to enhance NHL game outcome predictions. The combination of data from MoneyPuck, machine learning algorithms, and modern deployment technologies resulted in a model that significantly improved prediction accuracy.
 
 By using a modular approach, containerized architecture with Docker, and seamless CI/CD pipelines, the project was efficiently deployed and maintained on AWS EC2 and Elastic Beanstalk. This approach provides bettors with a powerful tool for making more informed decisions, potentially increasing profitability and enjoyment of NHL betting.
 
