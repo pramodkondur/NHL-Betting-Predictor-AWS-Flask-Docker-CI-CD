@@ -607,7 +607,7 @@ This project created a predictive model for NHL games, analyzing the potential f
 
 - **Total Games in a Season**: Approximately **656 games**.
 - **Predicted Wins**: With a **71%** accuracy:
-  Predicted Wins = 0.71 * 656 ≈ 462 wins
+  Predicted Wins = 0.71 * 656 ≈ 466 wins
 
 ## Hypothetical Betting Example
 
@@ -620,31 +620,31 @@ Let’s assume our model predicts the winning team for each game based on its an
 ### Expected Winnings Calculation
 
 1. **Winning Teams and Odds**: For simplicity, we assume the following moneyline odds for various hypothetical teams:
-   - **Favorites (approx. 60% of predicted wins)**: Average odds of -130
+   - **Favorites (approx. 60% of predicted wins)**: Average odds of -120
    - **Underdogs (approx. 40% of predicted wins)**: Average odds of +150
 
 #### Breakdown of Bets
 
 - **Number of Bets on Favorites**:
-Bets on Favorites = 0.6 * 462 ≈ 277 wins
+Bets on Favorites = 0.6 * 466 ≈ 280 wins
 
 
 - **Number of Bets on Underdogs**:
-Bets on Underdogs = 0.4 * 462 ≈ 185 wins
+Bets on Underdogs = 0.4 * 466 ≈ 186 wins
 
 - **Losses (Incorrect Predictions)**:
-Losses = 0.29 × 462 = 133.98 ≈ 134 games
+Losses = 656 - 466 ≈ 190 losses
 
 
 ### Total Payout Calculation
 
-1. **For Favorites (Odds -130)**:
+1. **For Favorites (Odds -120)**:
    - **Profit Calculation**:
-  Profit per Bet = 100 * (100 / 130) ≈ 76.92
+  Profit per Bet = 100 * (100 / 120) ≈ 83.33
 
 
    - **Total Profit**:
-  Total Profit from Favorites = 277 * 76.92 ≈ 21,358.84
+  Total Profit from Favorites = 280 * 83.33 ≈ 23,333.40
 
 
 2. **For Underdogs (Odds +150)**:
@@ -652,17 +652,17 @@ Losses = 0.29 × 462 = 133.98 ≈ 134 games
 Profit per Bet = 100 * (150 / 100) = 150
 
    - **Total Profit**:
-Total Profit from Underdogs = 185 * 150 = 27,750
+Total Profit from Underdogs = 186 * 150 = 27,900
 
 3. **For Losses**:
-    - **Total Loss**: Total Loss from Incorrect Predictions = 134 * 100 = 13,400
+    - **Total Loss**: Total Loss from Incorrect Predictions = 190 * 100 = 19,000
 
 
 ### Total Estimated Profit for the Season
 
-Total Estimated Profit = 21,358.84 + 27,750 - 13,400 ≈ 35,708.84
+Total Estimated Profit = 23,333.40 + 27,900 - 19,000 ≈ 32,233.40
 
-The adjusted total estimated profit for an entire season of NHL hockey games amounts to **$35,708.84**. This figure indicates a promising return on investment, showcasing the potential profitability of employing a strategic betting approach based on model predictions.
+The adjusted total estimated profit for an entire season of NHL hockey games amounts to **$32,233.40**. This figure indicates a promising return on investment, showcasing the potential profitability of employing a strategic betting approach based on model predictions.
 
 ## 10. Conclusion
 This project effectively showcased the integration of data science and machine learning to enhance predictions of NHL game outcomes. By leveraging data from MoneyPuck, applying advanced machine learning algorithms, and utilizing modern deployment technologies, we developed a model that substantially increased prediction accuracy.
