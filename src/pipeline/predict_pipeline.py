@@ -40,8 +40,8 @@ class CustomData:
                  last_10_games_win_home: int,
                  last_10_games_win_away: int,
                  last_meeting_result: int,
-                 last_game_result_home: int,
-                 last_game_result_away: int):
+                 last_game_result_home: float,
+                 last_game_result_away: float):
         
                 self.homeTeamCode = homeTeamCode
                 self.awayTeamCode = awayTeamCode

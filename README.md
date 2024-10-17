@@ -594,10 +594,18 @@ This deployment strategy not only enhances the application's performance but als
 
 Images for the app deployed on AWS EC2
 
+Home Team Win Prediction:
 ![img](static/images/img1.png)
 ![img](static/images/img2.png)
 ![img](static/images/img3.png)
 ![img](static/images/img4.png)
+
+Away Team Win Prediction:
+![img](static/images/AwayPred1.png)
+![img](static/images/AwayPred2.png)
+![img](static/images/AwayPred3.png)
+![img](static/images/AwayPred4.png)
+
 
 ## 9. Hypothetical Gain from the model
 
