@@ -4,7 +4,7 @@ from dataclasses import dataclass
 
 from sklearn.linear_model import LogisticRegression
 from sklearn.ensemble import RandomForestClassifier
-from sklearn.metrics import f1_score
+from sklearn.metrics import f1_score, accuracy_score, precision_score, recall_score, confusion_matrix
 
 from src.exception import CustomException
 from src.logger import logging
@@ -23,14 +23,20 @@ class ModelTrainer:
     def initiate_model_trainer(self,X_train_transformed, X_test_transformed, y_train, y_test):
         try:
             models = {
-                "Random Forest": RandomForestClassifier(random_state=42),
-                "Random Forest Tuned":RandomForestClassifier(
-                    n_estimators=50,        # Number of trees
-                    max_depth=5,            # Maximum depth
-                    min_samples_split=2,    # Minimum samples to split a node
-                    min_samples_leaf=10,    # Minimum samples in each leaf
-                    random_state=42),
-                "Logistic Regression": LogisticRegression(),
+                "Random Forest Tuned": RandomForestClassifier(
+                    max_depth= 10,
+                    n_estimators= 100),
+                #"Random Forest Tuned2":RandomForestClassifier(
+                #    n_estimators=50,        # Number of trees
+                #    max_depth=5,            # Maximum depth
+                #    min_samples_split=2,    # Minimum samples to split a node
+                #    min_samples_leaf=10,    # Minimum samples in each leaf
+                #   random_state=42),
+                #"Logistic Regression": LogisticRegression(
+                #    C = 10,
+                #    class_weight= 'balanced', 
+                #    solver = 'liblinear'
+                #),
                         }
     
 
@@ -58,12 +64,21 @@ class ModelTrainer:
 
             predicted=best_model.predict(X_test_transformed)
 
-            f1socre = f1_score(y_test, predicted)
-            return f1socre
-            
+            # Calculate metrics
+            f1 = f1_score(y_test, predicted, average='weighted')
+            accuracy = accuracy_score(y_test, predicted)
+            precision = precision_score(y_test, predicted)
+            recall = recall_score(y_test, predicted)
+            cm = confusion_matrix(y_test, predicted)
 
+            # Log the metrics
+            logging.info(f"F1 Score: {f1:.4f}")
+            logging.info(f"Accuracy: {accuracy:.4f}")
+            logging.info(f"Precision: {precision:.4f}")
+            logging.info(f"Recall: {recall:.4f}")
+            logging.info(f"Confusion Matrix:\n{cm}")
 
-
+            return f1
             
         except Exception as e:
             raise CustomException(e,sys)

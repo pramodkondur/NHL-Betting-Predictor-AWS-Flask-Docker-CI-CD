@@ -213,10 +213,10 @@ class DataIngestion:
             raise CustomException(e,sys)
         
 if __name__=="__main__":
-    obj=DataIngestion()
-    raw_data=obj.initiate_data_ingestion()
+    #obj=DataIngestion()
+    #raw_data=obj.initiate_data_ingestion()
 
-    #raw_data = ('artifacts/data.csv')
+    raw_data = ('artifacts/data.csv')
 
     data_transformation=DataTransformation()
     

@@ -1,6 +1,6 @@
 # NHL Betting Prediction Project
 
-## Using Data from MoneyPuck (2007-2023) and Machine Learning for Smarter Wagering
+## Using Data from MoneyPuck (2015-2023 Seasons) and Machine Learning for Smarter Wagering
 
 ![image](static/images/background.jpg)
 
@@ -78,7 +78,7 @@ The volatility of the NHL, influenced by a variety of in-game and external facto
   ### 1. Data Acquisition
 ### Money Puck - Dataset [Link](https://moneypuck.com/data.htm)
 
-The dataset used for this project comes from MoneyPuck, an advanced hockey analytics site. It includes NHL game outcomes, player statistics, and team metrics from the 2007-2023 seasons. This rich dataset provides the foundation for making more accurate predictions using machine learning techniques.
+The dataset used for this project comes from MoneyPuck, an advanced hockey analytics site. It includes NHL game outcomes, player statistics, and team metrics from the 2015-2023 seasons. This rich dataset provides the foundation for making more accurate predictions using machine learning techniques.
 
 ![img](static/images/moneypuck.png)
 
@@ -518,8 +518,8 @@ Overall, these conclusions can help inform strategic decisions for team manageme
 ## 5. Model Training, Testing and Evaluation
 
 In this step, we will look to train,test, and evaluate our model. The dataset is split into train and test and evaluated first on a base Random Forest Model without all the new features and then further 3 models with the new features and the results are as so:
-- A baseline model achieved an F1 score of **55%**, giving a basic measure of predictive performance.
-- An enhanced model which was a fine tuned Random Forest model achieved an F1 score of **71%**, demonstrating significant improvement.
+- A baseline model achieved an F1 score of **52%**, giving a basic measure of predictive performance.
+- An enhanced model which was a fine tuned Random Forest model achieved an F1 score of **61%**, demonstrating significant improvement.
 
 
 ## 6. Flask Application
@@ -614,8 +614,8 @@ This project created a predictive model for NHL games, analyzing the potential f
 ## Model Assumptions
 
 - **Total Games in a Season**: Approximately **656 games**.
-- **Predicted Wins**: With a **71%** accuracy:
-  Predicted Wins = 0.71 * 656 ≈ 466 wins
+- **Predicted Wins**: With a **62%** accuracy:
+  Predicted Wins = 0.62 * 656 ≈ 432 wins
 
 ## Hypothetical Betting Example
 
@@ -634,43 +634,40 @@ Let’s assume our model predicts the winning team for each game based on its an
 #### Breakdown of Bets
 
 - **Number of Bets on Favorites**:
-Bets on Favorites = 0.6 * 466 ≈ 280 wins
-
+  Bets on Favorites = 0.6 * 432 ≈ 259 wins
 
 - **Number of Bets on Underdogs**:
-Bets on Underdogs = 0.4 * 466 ≈ 186 wins
+  Bets on Underdogs = 0.4 * 432 ≈ 173 wins
 
 - **Losses (Incorrect Predictions)**:
-Losses = 656 - 466 ≈ 190 losses
-
+  Losses = 656 - 432 ≈ 224 losses
 
 ### Total Payout Calculation
 
 1. **For Favorites (Odds -120)**:
    - **Profit Calculation**:
-  Profit per Bet = 100 * (100 / 120) ≈ 83.33
-
+     Profit per Bet = 100 * (100 / 120) ≈ 83.33
 
    - **Total Profit**:
-  Total Profit from Favorites = 280 * 83.33 ≈ 23,333.40
-
+     Total Profit from Favorites = 259 * 83.33 ≈ 21,658.67
 
 2. **For Underdogs (Odds +150)**:
    - **Profit Calculation**:
-Profit per Bet = 100 * (150 / 100) = 150
+     Profit per Bet = 100 * (150 / 100) = 150
 
    - **Total Profit**:
-Total Profit from Underdogs = 186 * 150 = 27,900
+     Total Profit from Underdogs = 173 * 150 = 25,950
 
 3. **For Losses**:
-    - **Total Loss**: Total Loss from Incorrect Predictions = 190 * 100 = 19,000
-
+   - **Total Loss**: Total Loss from Incorrect Predictions = 224 * 100 = 22,400
 
 ### Total Estimated Profit for the Season
 
-Total Estimated Profit = 23,333.40 + 27,900 - 19,000 ≈ 32,233.40
+Total Estimated Profit = 21,658.67 + 25,950 - 22,400 ≈ 25,208.67
 
-The adjusted total estimated profit for an entire season of NHL hockey games amounts to **$32,233.40**. This figure indicates a promising return on investment, showcasing the potential profitability of employing a strategic betting approach based on model predictions.
+The adjusted total estimated profit for an entire season of NHL hockey games amounts to **$25,208.67**. This figure indicates a positive return on investment, showcasing the potential profitability of employing a strategic betting approach based on model predictions.
+
+The potential ROI for the betting strategy is approximately **40%** a season.
 
 ## 10. Conclusion
 This project effectively showcased the integration of data science and machine learning to enhance predictions of NHL game outcomes. By leveraging data from MoneyPuck, applying advanced machine learning algorithms, and utilizing modern deployment technologies, we developed a model that substantially increased prediction accuracy.
