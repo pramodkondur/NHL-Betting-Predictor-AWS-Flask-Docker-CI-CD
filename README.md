@@ -609,7 +609,7 @@ Away Team Win Prediction:
 
 ## 9. Hypothetical Gain from the model
 
-This project created a predictive model for NHL games, analyzing the potential financial gains from betting based on predicted outcomes. The model achieves an accuracy of **71%**, enabling users to make informed betting decisions throughout an NHL season. Now let's see how it would work in real use case.
+This project created a predictive model for NHL games, analyzing the potential financial gains from betting based on predicted outcomes. The model achieves an accuracy of **62%**, enabling users to make informed betting decisions throughout an NHL season. Now let's see how it would work in real use case.
 
 ## Model Assumptions
 
