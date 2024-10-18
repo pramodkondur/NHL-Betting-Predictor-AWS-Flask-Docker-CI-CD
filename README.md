@@ -665,9 +665,9 @@ Let’s assume our model predicts the winning team for each game based on its an
 
 Total Estimated Profit = 21,658.67 + 25,950 - 22,400 ≈ 25,208.67
 
-The adjusted total estimated profit for an entire season of NHL hockey games amounts to **$25,208.67**. This figure indicates a positive return on investment, showcasing the potential profitability of employing a strategic betting approach based on model predictions.
+The adjusted total estimated profit for an entire season of NHL hockey games amounts to **$25,208.67**. The potential ROI for the betting strategy is approximately **40%** a season. This figure indicates a positive return on investment, showcasing the potential profitability of employing a strategic betting approach based on model predictions.
 
-The potential ROI for the betting strategy is approximately **40%** a season.
+
 
 ## 10. Conclusion
 This project effectively showcased the integration of data science and machine learning to enhance predictions of NHL game outcomes. By leveraging data from MoneyPuck, applying advanced machine learning algorithms, and utilizing modern deployment technologies, we developed a model that substantially increased prediction accuracy.
